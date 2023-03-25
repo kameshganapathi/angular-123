@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>User Details</h2>
+    <div class="row justify-content-end">
+        <div class="col-4 mb-3">
+            <button type="button" class="btn btn-secondary mx-3" routerLink="/users" >
+                Back
+              </button>
+          <button type="button" class="btn btn-info" (click)="edit()" >
+            Edit 
+          </button>
+
+          <button type="button" class="btn btn-warning mx-3" (click)="delete()" >
+            Delete 
+          </button>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="fw-bold fs-4">No</div>
+            <div class="title">{{ user.no }}</div>
+        </div>
+        <div class="col-6">
+            <div class="fw-bold fs-4">Price</div>
+            <div>{{ user.price }}</div>
+        </div>
+
+        <div class="col-6">
+            <div class="fw-bold fs-4">email</div>
+            <div>{{ user.email }}</div>
+        </div>
+
+    </div>
+</div>

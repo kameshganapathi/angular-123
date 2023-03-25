@@ -1,0 +1,31 @@
+<h3>User</h3>
+<div class="row justify-content-end">
+  <div class="col-2 mb-3">
+    <button type="button" class="btn btn-primary" routerLink="/createproduct" >
+      Create User
+    </button>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table table-hover" >
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">username</th>
+        <th scope="col">email</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let User of Users;let no=index" (click)="UserDetails(User)" >
+        <th scope="row">{{ User.id }}</th>
+        <td>{{User.username}}</td>
+        <td>{{User.email}}</td>
+        <td>{{User.Phone}}</td>
+      </tr>
+      <tr *ngIf="User.length==0">
+        <td colspan="2"> No User found! </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+\<div class="row">
+    <form [formGroup]="UserEditForm" (ngSubmit) ="editUser()">
+    <div class="col-6">
+      <h1 class="fs-5" >Edit Products</h1>
+    
+      <div class="mb-3">
+        <label for="title" class="form-label">No</label>
+        <input type="text" class="form-control" id="title" formControlName="title" placeholder="User Title">
+      </div>
+    
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" formControlName="price" placeholder="Product Price">
+      </div>
+      
+    </div>
+      
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <button type="button" class="btn btn-secondary mx-3" (click)="back()">Back</button>
+        <button type="submit" class="btn btn-primary mx-3" [disabled]="UserEditForm.invalid" >Update</button>
+      </div>
+    </div>
+  </form>
+  </div>
